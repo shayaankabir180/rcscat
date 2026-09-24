@@ -1,26 +1,23 @@
-/* ==============================
-   RCSCAT WEBSITE
-   ============================== */
+/* ================= ROOT ================= */
 
 :root {
 
-    --background: #030712;
-    --background2: #071225;
+    --black: #000000;
+    --black2: #050505;
+    --dark: #0b0b0b;
 
-    --card: rgba(15, 28, 55, 0.72);
+    --white: #ffffff;
 
-    --text: #f5f7ff;
+    --gray: #b5b5b5;
+    --gray2: #777777;
 
-    --muted: #9ba9c7;
-
-    --cyan: #55d9ff;
-
-    --purple: #9275ff;
-
-    --border: rgba(120, 190, 255, 0.18);
+    --border:
+        rgba(255,255,255,0.18);
 
 }
 
+
+/* ================= RESET ================= */
 
 * {
 
@@ -41,28 +38,10 @@ body {
         Helvetica,
         sans-serif;
 
-    color: var(--text);
+    color: var(--white);
 
     background:
-
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(60,130,255,.18),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(140,70,255,.16),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            180deg,
-            #02040b,
-            #071021,
-            #02040b
-        );
+        var(--black);
 
     min-height: 100vh;
 
@@ -71,7 +50,7 @@ body {
 }
 
 
-/* STARS */
+/* ================= WHITE GRID ================= */
 
 body::before {
 
@@ -83,56 +62,51 @@ body::before {
 
     pointer-events: none;
 
-    opacity: .35;
+    z-index: -1;
+
+    opacity: 0.14;
 
     background-image:
 
-        radial-gradient(
-            circle,
-            white 1px,
+        linear-gradient(
+            rgba(255,255,255,0.65) 1px,
             transparent 1px
         ),
 
-        radial-gradient(
-            circle,
-            #79dfff 1px,
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.65) 1px,
             transparent 1px
         );
 
     background-size:
-        100px 100px,
-        170px 170px;
-
-    background-position:
-        20px 30px,
-        60px 100px;
-
-    z-index: -1;
+        45px 45px;
 
 }
 
 
-/* ================= NAVIGATION ================= */
+/* ================= NAVBAR ================= */
 
 header {
 
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
 
-    height: 85px;
+    height: 90px;
 
     background:
-        rgba(2,5,15,.82);
+        rgba(0,0,0,0.95);
 
-    backdrop-filter: blur(18px);
+    backdrop-filter:
+        blur(12px);
 
     border-bottom:
-        1px solid var(--border);
+        1px solid
+        rgba(255,255,255,0.15);
 
     z-index: 1000;
 
@@ -143,20 +117,22 @@ header {
 
     height: 100%;
 
-    max-width: 1300px;
+    max-width: 1400px;
 
     margin: auto;
 
-    padding: 8px 5% 0;
+    padding: 0 5%;
 
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
 
     justify-content: space-between;
 
 }
 
+
+/* ================= NAVBAR LOGO ================= */
 
 .logo {
 
@@ -166,27 +142,42 @@ header {
 
     letter-spacing: 4px;
 
-    color: var(--cyan);
-   
-}
-
-.logo img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
-}
-
-
-.logo span {
-
     color: white;
 
+    display: flex;
+
+    align-items: center;
+
 }
 
+
+.logo img {
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-right: 12px;
+
+}
+
+
+/* Move ONLY RCSCAT upward */
+
+.brand-name {
+
+    position: relative;
+
+    top: -3px;
+
+}
+
+
+/* ================= NAVIGATION ================= */
 
 .navbar ul {
 
@@ -201,20 +192,21 @@ header {
 
 .navbar a {
 
-    color: var(--muted);
+    color:
+        var(--gray);
 
     text-decoration: none;
 
-    font-size: .85rem;
+    font-size: 0.82rem;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
 
 .navbar a:hover {
 
-    color: var(--cyan);
+    color: white;
 
 }
 
@@ -230,6 +222,8 @@ header {
     color: white;
 
     font-size: 1.7rem;
+
+    cursor: pointer;
 
 }
 
@@ -248,71 +242,95 @@ header {
 
     text-align: center;
 
-    padding: 120px 7% 70px;
+    padding:
+        140px 7% 70px;
 
 }
 
 
 .hero-content {
 
-    max-width: 900px;
+    max-width: 950px;
 
 }
 
+
+/* ================= LARGE LOGO ================= */
+
+.hero-logo-container {
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-logo {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    filter:
+        grayscale(100%)
+        brightness(1.15);
+
+}
+
+
+/* ================= BADGE ================= */
 
 .badge {
 
     display: inline-block;
 
-    padding: 8px 16px;
+    padding:
+        8px 16px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        rgba(255,255,255,0.3);
 
     border-radius: 50px;
 
-    color: var(--cyan);
+    color: white;
 
-    font-size: .75rem;
+    font-size: 0.72rem;
 
     letter-spacing: 2px;
 
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
 }
 
 
+/* ================= HERO TEXT ================= */
+
 .hero h1 {
 
     font-size:
-        clamp(4rem, 15vw, 8rem);
+        clamp(4rem,15vw,8rem);
 
-    letter-spacing:
-        12px;
+    letter-spacing: 12px;
 
     line-height: 1;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
-    background:
-
-        linear-gradient(
-            90deg,
-            white,
-            var(--cyan),
-            var(--purple)
-        );
-
-    -webkit-background-clip: text;
-
-    color: transparent;
+    color: white;
 
 }
 
 
 .hero h2 {
 
-    color: var(--muted);
+    color:
+        var(--gray);
 
     font-weight: 400;
 
@@ -327,12 +345,15 @@ header {
 
     margin: 25px auto;
 
-    color: #8593b2;
+    color:
+        var(--gray2);
 
     line-height: 1.8;
 
 }
 
+
+/* ================= BUTTONS ================= */
 
 .hero-buttons {
 
@@ -349,54 +370,58 @@ header {
 }
 
 
-/* ================= BUTTONS ================= */
-
 .btn {
 
     display: inline-block;
 
-    padding: 13px 22px;
+    padding:
+        13px 22px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        rgba(255,255,255,0.3);
 
     color: white;
 
     background:
-        rgba(255,255,255,.04);
+        rgba(255,255,255,0.04);
 
     text-decoration: none;
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
 
 .btn:hover {
 
-    transform:
-        translateY(-3px);
+    background: white;
 
-    border-color:
-        var(--cyan);
+    color: black;
 
 }
 
 
 .primary {
 
-    background:
-        linear-gradient(
-            135deg,
-            #148ec5,
-            #7256d8
-        );
+    background: white;
+
+    color: black;
 
     border: none;
+
+}
+
+
+.primary:hover {
+
+    background: #cccccc;
+
+    color: black;
 
 }
 
@@ -406,7 +431,7 @@ header {
 section {
 
     padding:
-        90px 6%;
+        100px 6%;
 
 }
 
@@ -425,9 +450,10 @@ section {
 
 .section-heading span {
 
-    color: var(--cyan);
+    color:
+        var(--gray);
 
-    font-size: .75rem;
+    font-size: 0.72rem;
 
     letter-spacing: 3px;
 
@@ -445,7 +471,8 @@ section {
 
 .section-heading p {
 
-    color: var(--muted);
+    color:
+        var(--gray2);
 
     margin-top: 12px;
 
@@ -465,7 +492,7 @@ section {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(2,1fr);
 
     gap: 20px;
 
@@ -474,23 +501,18 @@ section {
 
 .card {
 
-    padding: 28px;
+    padding: 30px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: 18px;
+    border-radius: 16px;
 
     background:
-        var(--card);
+        rgba(255,255,255,0.025);
 
-    backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 15px 50px
-        rgba(0,0,0,.25);
-
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -498,17 +520,17 @@ section {
 .card:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-5px);
 
     border-color:
-        rgba(80,210,255,.45);
+        rgba(255,255,255,0.5);
 
 }
 
 
 .icon {
 
-    font-size: 2rem;
+    font-size: 2.2rem;
 
     margin-bottom: 15px;
 
@@ -524,122 +546,198 @@ section {
 
 .card p {
 
-    color: var(--muted);
+    color:
+        var(--gray);
 
     line-height: 1.7;
 
-    font-size: .92rem;
+    font-size: 0.92rem;
 
 }
 
 
-.card button {
+/* ================= SUBJECT LINKS ================= */
+
+.subject-links {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.subject-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    padding-bottom: 8px;
+
+    font-size: 0.88rem;
+
+    transition: 0.3s;
+
+}
+
+
+.subject-links a:hover {
+
+    padding-left: 7px;
+
+    color: #cccccc;
+
+}
+
+
+/* ================= DETAILS ================= */
+
+.details-section {
+
+    background:
+        rgba(255,255,255,0.015);
+
+}
+
+
+.details-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 18px;
+
+}
+
+
+.detail-card {
+
+    padding: 28px;
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(0,0,0,0.7);
+
+}
+
+
+.detail-card span {
+
+    font-size: 0.68rem;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--gray2);
+
+}
+
+
+.detail-card h3 {
+
+    margin:
+        10px 0 12px;
+
+}
+
+
+.detail-card p {
+
+    color:
+        var(--gray);
+
+    line-height: 1.7;
+
+}
+
+
+/* ================= SMALL BUTTON ================= */
+
+.small-btn {
 
     margin-top: 18px;
 
-    padding: 10px 14px;
+    padding:
+        10px 16px;
 
-    background: transparent;
+    background:
+        transparent;
 
-    color: var(--cyan);
+    color: white;
 
     border:
-        1px solid var(--border);
+        1px solid
+        rgba(255,255,255,0.3);
 
-    border-radius: 8px;
+    border-radius: 7px;
 
     cursor: pointer;
 
-}
-
-
-.card button:hover {
-
-    border-color:
-        var(--cyan);
+    transition: 0.3s;
 
 }
 
 
-/* ================= TEST ================= */
+.small-btn:hover {
 
-.test-box {
+    background: white;
 
-    max-width: 800px;
+    color: black;
+
+}
+
+
+/* ================= SINGLE BOX ================= */
+
+.single-box {
+
+    max-width: 850px;
 
     margin: auto;
 
     padding: 30px;
 
     border:
-        1px solid var(--border);
-
-    border-radius: 20px;
-
-    background:
-        var(--card);
-
-}
-
-
-.question {
-
-    margin-bottom: 30px;
-
-}
-
-
-.question h3 {
-
-    margin-bottom: 15px;
-
-}
-
-
-.question label {
-
-    display: block;
-
-    padding: 12px;
-
-    margin: 8px 0;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 10px;
-
-    color: var(--muted);
-
-    cursor: pointer;
-
-}
-
-
-.question label:hover {
-
-    border-color:
-        var(--cyan);
-
-    color: white;
-
-}
-
-
-#result {
-
-    display: none;
-
-    margin-top: 20px;
-
-    padding: 15px;
-
-    border-radius: 10px;
+        1px solid
+        var(--border);
 
     background:
-        rgba(70,200,255,.08);
+        rgba(255,255,255,0.025);
 
-    color: var(--cyan);
+}
+
+
+.single-box h3 {
+
+    margin-bottom: 12px;
+
+}
+
+
+.single-box p {
+
+    color:
+        var(--gray);
+
+    line-height: 1.7;
 
 }
 
@@ -662,22 +760,20 @@ section {
     margin-bottom: 15px;
 
     border-left:
-        3px solid var(--cyan);
+        3px solid white;
 
     background:
-        var(--card);
-
-    border-radius:
-        0 15px 15px 0;
+        rgba(255,255,255,0.025);
 
 }
 
 
 .event span {
 
-    color: var(--cyan);
+    color:
+        var(--gray2);
 
-    font-size: .75rem;
+    font-size: 0.7rem;
 
     letter-spacing: 2px;
 
@@ -686,48 +782,15 @@ section {
 
 .event h3 {
 
-    margin:
-        8px 0;
+    margin: 8px 0;
 
 }
 
 
 .event p {
 
-    color: var(--muted);
-
-}
-
-
-/* ================= SEARCH ================= */
-
-.search {
-
-    max-width: 700px;
-
-    margin:
-        0 auto 35px;
-
-}
-
-
-.search input {
-
-    width: 100%;
-
-    padding: 15px 18px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 12px;
-
-    background:
-        rgba(255,255,255,.04);
-
-    color: white;
-
-    outline: none;
+    color:
+        var(--gray);
 
 }
 
@@ -754,12 +817,13 @@ section {
     margin-bottom: 15px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     background:
-        rgba(255,255,255,.04);
+        rgba(255,255,255,0.03);
 
     color: white;
 
@@ -779,8 +843,7 @@ section {
 
 .form-box option {
 
-    background:
-        #071225;
+    background: black;
 
 }
 
@@ -795,16 +858,18 @@ footer {
         55px 6%;
 
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    color: var(--muted);
+    color:
+        var(--gray2);
 
 }
 
 
 .footer-logo {
 
-    color: var(--cyan);
+    color: white;
 
     font-size: 1.7rem;
 
@@ -817,27 +882,19 @@ footer {
 }
 
 
-.tagline {
-
-    margin-top: 8px;
-
-}
-
-
 .socials {
 
-    margin:
-        25px 0;
+    margin: 25px 0;
 
 }
 
 
 .socials a {
 
-    margin:
-        0 8px;
+    margin: 0 8px;
 
-    color: var(--muted);
+    color:
+        var(--gray);
 
     text-decoration: none;
 
@@ -846,27 +903,78 @@ footer {
 
 .socials a:hover {
 
-    color: var(--cyan);
+    color: white;
 
 }
 
 
 .copyright {
 
-    font-size: .8rem;
+    font-size: 0.8rem;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ================= DEVELOPER CREDIT ================= */
+
+.developer {
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    max-width: 500px;
+
+    margin: auto;
+
+    font-size: 0.82rem;
+
+    letter-spacing: 1px;
+
+    color:
+        var(--gray2);
+
+}
+
+
+.developer strong {
+
+    color: white;
+
+    font-weight: 600;
 
 }
 
 
 /* ================= MOBILE ================= */
 
-@media(max-width: 850px) {
+@media(max-width:850px) {
+
+
+    header {
+
+        height: 90px;
+
+    }
+
+
+    .navbar {
+
+        padding:
+            0 5%;
+
+    }
+
 
     .navbar ul {
 
         position: absolute;
 
-        top: 70px;
+        top: 90px;
 
         right: -100%;
 
@@ -879,9 +987,9 @@ footer {
         text-align: center;
 
         background:
-            rgba(2,5,15,.97);
+            rgba(0,0,0,0.98);
 
-        transition: .3s;
+        transition: 0.3s;
 
     }
 
@@ -900,7 +1008,30 @@ footer {
     }
 
 
+    .logo img {
+
+        width: 80px;
+
+        height: 80px;
+
+    }
+
+
+    .logo {
+
+        font-size: 1.2rem;
+
+    }
+
+
     .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .details-grid {
 
         grid-template-columns: 1fr;
 
@@ -910,7 +1041,7 @@ footer {
     section {
 
         padding:
-            70px 5%;
+            75px 5%;
 
     }
 
@@ -918,12 +1049,23 @@ footer {
     .hero {
 
         padding:
-            120px 5% 70px;
+            125px 5% 70px;
+
+    }
+
+
+    .hero-logo {
+
+        width: 150px;
+
+        height: 150px;
 
     }
 
 
     .hero h1 {
+
+        font-size: 4rem;
 
         letter-spacing: 6px;
 
@@ -939,7 +1081,10 @@ footer {
 }
 
 
-@media(min-width: 851px) and (max-width: 1100px) {
+/* ================= TABLET ================= */
+
+@media(min-width:851px)
+and (max-width:1100px) {
 
     .cards {
 
@@ -948,17 +1093,4 @@ footer {
 
     }
 
-}
-/* CLUB LOGO */
-
-
-.logo img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-
-
-
+   }
