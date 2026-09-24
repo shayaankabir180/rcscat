@@ -1,28 +1,36 @@
 /* ================= MOBILE MENU ================= */
 
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuButton =
+        document.getElementById("menu-btn");
 
     const menu =
         document.getElementById("nav-menu");
 
-    menu.classList.toggle("active");
 
-}
+    /* Open / close menu */
+
+    menuButton.addEventListener("click", function () {
+
+        menu.classList.toggle("active");
+
+    });
 
 
-/* ================= CLOSE MOBILE MENU ================= */
+    /* Close menu after clicking a link */
 
-const navLinks =
-    document.querySelectorAll("#nav-menu a");
+    const navLinks =
+        document.querySelectorAll("#nav-menu a");
 
 
-navLinks.forEach(function(link) {
+    navLinks.forEach(function (link) {
 
-    link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
 
-        document
-            .getElementById("nav-menu")
-            .classList.remove("active");
+            menu.classList.remove("active");
+
+        });
 
     });
 
