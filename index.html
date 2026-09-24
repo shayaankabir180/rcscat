@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RCSCAT | Rajshahi College Science Club Academic Team</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            RCSCAT
+            <span>•</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#olympiads">Olympiads</a></li>
+            <li><a href="#tests">Mock Tests</a></li>
+            <li><a href="#chess">Chess</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            RAJSHAHI COLLEGE SCIENCE CLUB
+        </div>
+
+        <h1>RCSCAT</h1>
+
+        <h2>
+            Rajshahi College Science Club
+            <br>
+            Academic Team
+        </h2>
+
+        <p>
+            Explore science. Solve problems. Compete.
+            Learn beyond the classroom and discover the
+            universe of knowledge.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#olympiads" class="btn primary">
+                Explore Olympiads
+            </a>
+
+            <a href="#tests" class="btn">
+                Take a Mock Test
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OLYMPIADS -->
+
+<section id="olympiads">
+
+    <div class="section-heading">
+        <span>ACADEMIC ARENA</span>
+        <h2>Olympiad Preparation</h2>
+
+        <p>
+            Resources and guidance for students preparing
+            for science and mathematics Olympiads.
+        </p>
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚛️</div>
+
+            <h3>Physics</h3>
+
+            <p>
+                Mechanics, electricity, waves, optics,
+                thermodynamics and advanced problem solving.
+            </p>
+
+            <button onclick="comingSoon('Physics')">
+                Explore Physics →
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🧪</div>
+
+            <h3>Chemistry</h3>
+
+            <p>
+                Physical, organic and inorganic chemistry
+                for Olympiad preparation.
+            </p>
+
+            <button onclick="comingSoon('Chemistry')">
+                Explore Chemistry →
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🧬</div>
+
+            <h3>Biology</h3>
+
+            <p>
+                Cell biology, genetics, physiology,
+                ecology and evolution.
+            </p>
+
+            <button onclick="comingSoon('Biology')">
+                Explore Biology →
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📐</div>
+
+            <h3>Mathematics</h3>
+
+            <p>
+                Algebra, geometry, number theory,
+                combinatorics and inequalities.
+            </p>
+
+            <button onclick="comingSoon('Mathematics')">
+                Explore Mathematics →
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🔭</div>
+
+            <h3>Astronomy</h3>
+
+            <p>
+                Stars, galaxies, cosmology, celestial
+                mechanics and observational astronomy.
+            </p>
+
+            <button onclick="comingSoon('Astronomy')">
+                Explore Astronomy →
+            </button>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🧠</div>
+
+            <h3>Problem Bank</h3>
+
+            <p>
+                A growing collection of challenging
+                problems for curious minds.
+            </p>
+
+            <button onclick="comingSoon('Problem Bank')">
+                Open Problem Bank →
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOCK TEST -->
+
+<section id="tests">
+
+    <div class="section-heading">
+
+        <span>CHALLENGE YOURSELF</span>
+
+        <h2>Mock Test</h2>
+
+        <p>
+            Try our sample science test.
+        </p>
+
+    </div>
+
+
+    <div class="test-box">
+
+        <div class="question">
+
+            <h3>
+                1. What is the SI unit of energy?
+            </h3>
+
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                Watt
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="correct">
+                Joule
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="wrong">
+                Newton
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>
+                2. Which planet has the most prominent
+                ring system?
+            </h3>
+
+            <label>
+                <input type="radio" name="q2" value="wrong">
+                Mars
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="correct">
+                Saturn
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="wrong">
+                Venus
+            </label>
+
+        </div>
+
+
+        <div class="question">
+
+            <h3>
+                3. What is approximately the speed of light?
+            </h3>
+
+            <label>
+                <input type="radio" name="q3" value="wrong">
+                3 × 10⁵ m/s
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="correct">
+                3 × 10⁸ m/s
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="wrong">
+                3 × 10³ m/s
+            </label>
+
+        </div>
+
+
+        <button class="btn primary" onclick="checkTest()">
+            Submit Test
+        </button>
+
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+
+<!-- CHESS -->
+
+<section id="chess">
+
+    <div class="section-heading">
+
+        <span>STRATEGY & COMPETITION</span>
+
+        <h2>RCSCAT Chess</h2>
+
+        <p>
+            Think ahead. Calculate. Compete.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">♟️</div>
+
+            <h3>Tournaments</h3>
+
+            <p>
+                Follow upcoming RCSCAT chess tournaments
+                and competitions.
+            </p>
+
+            <button onclick="comingSoon('Chess Tournaments')">
+                View Tournaments →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">♞</div>
+
+            <h3>Training</h3>
+
+            <p>
+                Improve your calculation, tactics,
+                openings and strategy.
+            </p>
+
+            <button onclick="comingSoon('Chess Training')">
+                Start Training →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🏆</div>
+
+            <h3>Leaderboard</h3>
+
+            <p>
+                Track results from RCSCAT chess events.
+            </p>
+
+            <button onclick="comingSoon('Leaderboard')">
+                View Leaderboard →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PODCAST -->
+
+<section id="podcast">
+
+    <div class="section-heading">
+
+        <span>LISTEN & LEARN</span>
+
+        <h2>RCSCAT Podcast</h2>
+
+        <p>
+            Conversations about science, ideas and curiosity.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🎙️</div>
+
+            <h3>Episode 01</h3>
+
+            <p>
+                Why are humans curious?
+            </p>
+
+            <button onclick="comingSoon('Podcast Episode 01')">
+                Listen →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🌌</div>
+
+            <h3>Episode 02</h3>
+
+            <p>
+                Stars, galaxies and the scale of the universe.
+            </p>
+
+            <button onclick="comingSoon('Podcast Episode 02')">
+                Listen →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧬</div>
+
+            <h3>Episode 03</h3>
+
+            <p>
+                The strange world of genetics.
+            </p>
+
+            <button onclick="comingSoon('Podcast Episode 03')">
+                Listen →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GUIDELINES -->
+
+<section id="guidelines">
+
+    <div class="section-heading">
+
+        <span>LEARN BETTER</span>
+
+        <h2>Guideline Sessions</h2>
+
+        <p>
+            Guidance for students who want to go beyond
+            the standard curriculum.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🎯</div>
+
+            <h3>Olympiad Roadmap</h3>
+
+            <p>
+                Learn how to start Olympiad preparation
+                and build strong fundamentals.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📚</div>
+
+            <h3>Study Strategy</h3>
+
+            <p>
+                Develop an effective approach to learning
+                and problem solving.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔬</div>
+
+            <h3>Research & Curiosity</h3>
+
+            <p>
+                Learn how to explore questions beyond
+                textbooks and classrooms.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTICLES -->
+
+<section id="articles">
+
+    <div class="section-heading">
+
+        <span>KNOWLEDGE</span>
+
+        <h2>Articles</h2>
+
+        <p>
+            Science, mathematics, astronomy and ideas.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🌌</div>
+
+            <h3>What Happens Inside a Star?</h3>
+
+            <p>
+                An introduction to stellar structure,
+                fusion and stellar evolution.
+            </p>
+
+            <button onclick="comingSoon('Article')">
+                Read Article →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚛️</div>
+
+            <h3>Why Quantum Mechanics Is Strange</h3>
+
+            <p>
+                A beginner-friendly look at quantum physics.
+            </p>
+
+            <button onclick="comingSoon('Article')">
+                Read Article →
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧠</div>
+
+            <h3>How to Solve Difficult Problems</h3>
+
+            <p>
+                Strategies for approaching problems
+                when the solution isn't obvious.
+            </p>
+
+            <button onclick="comingSoon('Article')">
+                Read Article →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section id="events">
+
+    <div class="section-heading">
+
+        <span>WHAT'S HAPPENING</span>
+
+        <h2>Events</h2>
+
+        <p>
+            Competitions, sessions and activities.
+        </p>
+
+    </div>
+
+
+    <div class="events">
+
+        <div class="event">
+
+            <span>COMING SOON</span>
+
+            <h3>RCSCAT Physics Challenge</h3>
+
+            <p>
+                An online physics problem-solving challenge.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <span>COMING SOON</span>
+
+            <h3>RCSCAT Chess Tournament</h3>
+
+            <p>
+                Competitive chess for students.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <span>COMING SOON</span>
+
+            <h3>Astronomy Night</h3>
+
+            <p>
+                Explore the night sky and observational astronomy.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+    <div class="section-heading">
+
+        <span>OUR JOURNEY</span>
+
+        <h2>Achievements</h2>
+
+        <p>
+            Celebrating academic and competitive accomplishments.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🏆</div>
+
+            <h3>Olympiad Achievements</h3>
+
+            <p>
+                Showcase Olympiad medals, selections
+                and notable results.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">♟️</div>
+
+            <h3>Chess Achievements</h3>
+
+            <p>
+                Showcase tournament winners and
+                memorable performances.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔬</div>
+
+            <h3>Academic Projects</h3>
+
+            <p>
+                Showcase research projects and
+                science-fair achievements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section id="resources">
+
+    <div class="section-heading">
+
+        <span>KNOWLEDGE BASE</span>
+
+        <h2>Resources</h2>
+
+        <p>
+            Useful material for learning and preparation.
+        </p>
+
+    </div>
+
+
+    <div class="search">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search resources..."
+            onkeyup="searchResources()"
+        >
+
+    </div>
+
+
+    <div class="cards" id="resourceList">
+
+        <div class="card resource">
+
+            <div class="icon">📘</div>
+
+            <h3>Physics Resources</h3>
+
+            <p>
+                Books, notes, formulas and problem collections.
+            </p>
+
+            <button onclick="comingSoon('Physics Resources')">
+                Open →
+            </button>
+
+        </div>
+
+
+        <div class="card resource">
+
+            <div class="icon">🧪</div>
+
+            <h3>Chemistry Resources</h3>
+
+            <p>
+                Notes, references and problem collections.
+            </p>
+
+            <button onclick="comingSoon('Chemistry Resources')">
+                Open →
+            </button>
+
+        </div>
+
+
+        <div class="card resource">
+
+            <div class="icon">🧬</div>
+
+            <h3>Biology Resources</h3>
+
+            <p>
+                Study material and useful references.
+            </p>
+
+            <button onclick="comingSoon('Biology Resources')">
+                Open →
+            </button>
+
+        </div>
+
+
+        <div class="card resource">
+
+            <div class="icon">📐</div>
+
+            <h3>Mathematics Resources</h3>
+
+            <p>
+                Problem books, notes and references.
+            </p>
+
+            <button onclick="comingSoon('Mathematics Resources')">
+                Open →
+            </button>
+
+        </div>
+
+
+        <div class="card resource">
+
+            <div class="icon">🔭</div>
+
+            <h3>Astronomy Resources</h3>
+
+            <p>
+                Astronomy books and observation guides.
+            </p>
+
+            <button onclick="comingSoon('Astronomy Resources')">
+                Open →
+            </button>
+
+        </div>
+
+
+        <div class="card resource">
+
+            <div class="icon">♟️</div>
+
+            <h3>Chess Resources</h3>
+
+            <p>
+                Chess books, puzzles and training material.
+            </p>
+
+            <button onclick="comingSoon('Chess Resources')">
+                Open →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUBMISSION -->
+
+<section id="submit">
+
+    <div class="section-heading">
+
+        <span>COMMUNITY</span>
+
+        <h2>Submit to RCSCAT</h2>
+
+        <p>
+            Have an article, problem, project or idea?
+            Send it to the team.
+        </p>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <form onsubmit="submitForm(event)">
+
+            <input
+                type="text"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your email"
+                required
+            >
+
+            <select required>
+
+                <option value="">
+                    Select submission type
+                </option>
+
+                <option>Article</option>
+                <option>Problem</option>
+                <option>Research / Project</option>
+                <option>Event Idea</option>
+                <option>Other</option>
+
+            </select>
+
+
+            <textarea
+                placeholder="Tell us about your submission..."
+                required>
+            </textarea>
+
+
+            <button class="btn primary" type="submit">
+                Send Submission
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        RCSCAT
+    </div>
+
+    <p>
+        Rajshahi College Science Club Academic Team
+    </p>
+
+    <p class="tagline">
+        Explore. Calculate. Discover.
+    </p>
+
+    <div class="socials">
+
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 RCSCAT. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
