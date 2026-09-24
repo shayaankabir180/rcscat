@@ -171,10 +171,14 @@ header {
 }
 
 .logo img {
-    width:45px;
-    height:45px;
-    object-fit:contain;
-    margin-right:8px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid var(--cyan);
+    background: #071225;
+    box-shadow: 0 0 15px rgba(85, 217, 255, 0.5);
 }
 
 }
@@ -950,11 +954,15 @@ footer {
 }
 /* CLUB LOGO */
 
+
 .logo img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    margin-right: 8px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan);
+    background: #071225;
+    box-shadow: 0 0 15px rgba(85, 217, 255, 0.5);
 }
 
 
