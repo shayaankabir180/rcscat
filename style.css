@@ -171,14 +171,11 @@ header {
 }
 
 .logo img {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
-    border: 2px solid var(--cyan);
-    background: #071225;
-    box-shadow: 0 0 15px rgba(85, 217, 255, 0.5);
 }
 
 }
@@ -956,13 +953,11 @@ footer {
 
 
 .logo img {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--cyan);
-    background: #071225;
-    box-shadow: 0 0 15px rgba(85, 217, 255, 0.5);
+    margin-right: 10px;
 }
 
 
